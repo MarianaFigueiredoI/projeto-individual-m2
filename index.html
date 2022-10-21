@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificação de Mensagens</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main> <!--Conteúdo da página-->
+        <form action="#" method="get" id="formulario"> <!--Formulário para codificação ou decodificação de mensagens-->
+            <section>
+                <h1>Codificação de Mensagens</h1> 
+                <hr>
+                <br>
+                <div id="user-message"> <!--Campo de entrada textual da mensagem que será codificada ou decodificada-->
+                    <label for="mensagem">Sua mensagem:</label><br>
+                    <textarea name="msg" id="msg" value="msg" cols="60" rows="5" placeholder="Por favor, digite a sua mensagem aqui." required></textarea>
+                </div>
+                <br>
+                <div> <!--Campo de seleção com as opções "Base64" e "Cifra de César"-->
+                    <label for="cod" id="selecione">Escolha um método de codificação:</label>
+                    <select name="select" class="select">
+                        <option value="selecione" disabled selected>Selecione</option>
+                        <option value="base64">Base64</option>
+                        <option value="cesar">Cifra de César</option>
+                    </select>
+                </div>
+                <br>
+                <div class="chave"> <!--Incremento utilizado na Cifra de César-->
+                    <label for="range">Escolha a chave:</label>
+                    <div class="slider-range">
+                        <input type="range" value="1" min="1" max="26" id="range" oninput="rangenumber.value=value">
+                        <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value">
+                    </div>
+                </div>
+                <br>
+                <div class="radio-button"> <!--Campos radiais-->
+                    <div class="radio">
+                        <input type="radio" name="options" id="codificar" value="codificar" checked>
+                        <label for="codificar">Codificar</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="options" id="decodificar" value="decodificar">
+                        <label for="decodificar">Decodificar</label>
+                    </div>
+                </div>
+                <br>
+                <div> <!--Botão de codificação ou decodificação-->
+                    <button id="btnCod">Codificar Mensagem!</button>
+                </div>
+                <br>
+            </section>
+            <hr>
+            <section id="resultCode"> <!-- Campo textual de resultado da codificação ou decodificação-->
+                <label for="result" id="resultado">Resultado:</label><br>
+                <textarea name="resultado" id="result" readonly cols="60" rows="4" placeholder="Sua mensagem codificada ou decodificada aparecerá aqui."></textarea>
+            </section>
+            <br>
+        </form>
+    </main>
+    <footer id="rodape"> <!--Rodapé-->
+        <p>Criado por Mariana Figueiredo.</p>
+    </footer>
+</body>
+</html>
