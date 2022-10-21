@@ -79,6 +79,6 @@ btn.addEventListener("click", function (event) {
     resultado.innerText = base64();
   } 
   else if (selecione.value === "cesar") {
-      resultado.innerText = cifraCesar();
+    resultado.innerText = cifraCesar();
   }
 })
