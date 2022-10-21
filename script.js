@@ -8,13 +8,13 @@ var resultado = document.querySelector("#result");
 
 // Função da Base64.
 function base64() {
-  var mensagem = document.querySelector("#msg").value;
+  let mensagem = document.querySelector("#msg").value;
   if (codificar.checked) {
-    var codificado = btoa(mensagem);
+    let codificado = btoa(mensagem);
     return codificado;
   } 
   else if (decodificar.checked) {
-    var decodificado = atob(mensagem);
+    let decodificado = atob(mensagem);
     return decodificado;
   }
 }
@@ -31,9 +31,9 @@ selecione.addEventListener("click", function () {
 
 // Função da Cifra de César.
 function cifraCesar() {
-  var msg = document.querySelector("#msg").value;
-  var chave = parseInt(document.querySelector("#rangenumber").value);
-  var saida = '';
+  let msg = document.querySelector("#msg").value;
+  let chave = parseInt(document.querySelector("#rangenumber").value);
+  let saida = '';
   
   if (codificar.checked) {
     for (let i = 0; i < msg.length; i++) {
