@@ -8,4 +8,5 @@ Tecnologias utilizadas:
 •	CSS3;
 •	JavaScript.
 
+
 Para executar o projeto, clique neste link: https://marianafigueiredoi.github.io/projeto-individual-m2/
