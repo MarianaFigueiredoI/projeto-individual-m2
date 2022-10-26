@@ -39,7 +39,7 @@ function cifraCesar() {
     for (let i = 0; i < msg.length; i++) {
       if (msg[i] === msg[i].toUpperCase()) {
         saida += String.fromCharCode((msg.charCodeAt(i) + chave - 65) % 26 + 65); 
-    } 
+      } 
       else {
         saida += String.fromCharCode((msg.charCodeAt(i) + chave - 97) % 26 + 97);
       }
